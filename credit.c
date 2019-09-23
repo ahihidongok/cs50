@@ -26,50 +26,50 @@ int main(void)
         int digit = 0; 
         int sum = 0; 
         long temp = card_num;
-        if(card_num > 0)
+        if (card_num > 0)
         {
-            while (temp>0)
+            while (temp > 0)
             {
                 digit++;
-                sum = sum + (temp%10);
+                sum = sum + (temp % 10);
                 temp = temp / 10;
-                if (temp >0)
+                if (temp > 0)
                 {
                     digit++;
-                    sum = sum + (2*(temp%10));
-                    temp = temp /10;
+                    sum = sum + (2 * (temp % 10));
+                    temp = temp / 10;
                 }
             }
    
         
-        if (sum % 10 == 0)
-        {
-            if (digit == 15 && (card_num / 10000000000000 == 34 || card_num / 10000000000000 == 37))
+            if (sum % 10 == 0)
             {
-                printf("AMEX\n");
-                valid = 1;
-            }
-            else if (digit == 16 && (card_num / 10000000000000 >= 51 || card_num / 10000000000000 <= 55))
-            {
-                printf("MASTERCARD\n");
-                valid = 1;
-            }
-            else if (digit == 16 && card_num / 10000000000000 == 4)
-            {
-                printf("VISA\n");
-                valid = 1;
+                if (digit == 15 && (card_num / 10000000000000 == 34 || card_num / 10000000000000 == 37))
+                {
+                    printf("AMEX\n");
+                    valid = 1;
+                }
+                else if (digit == 16 && (card_num / 10000000000000 >= 51 || card_num / 10000000000000 <= 55))
+                {
+                    printf("MASTERCARD\n");
+                    valid = 1;
+                }
+                else if (digit == 16 && card_num / 10000000000000 == 4)
+                {
+                    printf("VISA\n");
+                    valid = 1;
+                }
+                else
+                {
+                    printf("INVALID\n");
+                    valid = 1;
+                }
             }
             else
-            {
+            {    
                 printf("INVALID\n");
                 valid = 1;
             }
         }
-        else
-        {
-            printf("INVALID\n");
-            valid = 1;
-        }
-    }
     }
 }
