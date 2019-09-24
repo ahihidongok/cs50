@@ -41,6 +41,7 @@ int main(int argc, string argv[])
                 printf("%c", input[i]);
             }
         }
+        printf("\n");
 
         return 0;
     }
