@@ -24,7 +24,7 @@ int main(int argc, string argv[])
     {
         string input = get_string("plaintext: ");
 
-        printf("ciphertext ");
+        printf("ciphertext: ");
         for (int i = 0; i < strlen(input); i++)
         {
 
@@ -42,7 +42,6 @@ int main(int argc, string argv[])
             }
         }
 
-        printf("\n");
         return 0;
     }
 }
