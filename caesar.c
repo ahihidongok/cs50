@@ -30,15 +30,15 @@ int main(int argc, string argv[])
         {
             if islower(input[i])
             {
-                printf("ciphertext %c", (((input[i] + k) - 97) % 26) + 97);
+                printf("ciphertext %c\n", (((input[i] + k) - 97) % 26) + 97);
             }
             else if isupper(input[i])
             {
-                printf("cinphertext %c", (((input[i] + k) - 65) % 26) + 65);
+                printf("cinphertext %c\n", (((input[i] + k) - 65) % 26) + 65);
             }
             else
             {
-                printf("cinphertext %c", input[i]);
+                printf("cinphertext %c\n", input[i]);
             }
                 
         }
