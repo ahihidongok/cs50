@@ -22,7 +22,9 @@ int main(int argc, string argv[])
     }
     else
     {
-        string input = get_string();
+        string input;
+        printf("plaintext: ");
+        strcpy(input, fgets( input, 2000, stdin));
         
         for (int i = 0; i < strlen(input); i++)
         {
